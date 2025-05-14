@@ -33,8 +33,24 @@ High-level block diagram of SoC + TPM integration
 Each block is labeled with a representative part/mfg. and memory tech.
 
 text
-Copy
-Edit
+No – there is no way for a Promoter or Contributor to unilaterally “push through” a change to the TPM specification. By the TCG’s own governance rules, every normative change (whether it’s a minor erratum, a new command, a new algorithm identifier, or a whole new version of the Library) must be proposed in the appropriate Technical Work Group, circulated for member review, and then pass a formal Work-Group ballot in which each Promoter and Contributor member gets one vote. If the ballot fails, the text does not change.
+
+The only things you can do without going through that ballot are:
+
+Field‐upgrade your own TPM firmware (a “field upgrade” or vendor firmware update) to fix bugs or add proprietary features in your silicon.
+
+That firmware can behave however you like, but it doesn’t change the official TCG spec or any other vendor’s firmware 
+Wikipedia
+.
+
+Ship a non‐conformant extension on your devices.
+
+Again, useful internally, but it won’t interoperate with software or platforms that expect a TCG-compliant TPM.
+
+In other words, only a successful vote by Promoter/Contributor members can alter the published TPM spec. There is no back-door or “exec-edits” path around the ballot process.
+
+
+
 +----------------------------------+
 |           Main SoC/CPU           |
 |  • e.g. Intel Tiger Lake U (10nm)| 
